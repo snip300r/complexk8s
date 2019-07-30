@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector: 
+    component: web
+  ports:
+    - port: 3000 #this is for internal commucation 
+      targetPort: 3000 #and this is for targeting the port
+      
