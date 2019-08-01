@@ -19,7 +19,7 @@ before_install:
 
 script:
   - docker run shafik/react-test npm test -- --coverage
-
+# testing
 deploy:
   provider: script
   script: bash ./deploy.sh
