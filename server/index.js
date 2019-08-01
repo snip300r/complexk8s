@@ -1,6 +1,6 @@
 const keys = require('./keys');
 
-// Express App Setup 
+// Express App Setup
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Postgres Client Setup 
+// Postgres Client Setup
 const { Pool } = require('pg');
 const pgClient = new Pool({
   user: keys.pgUser,
@@ -40,9 +40,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/values/all', async (req, res) => {
-  const values = await pgClient.query('SELECT * from values');
+  // const values = await pgClient.query('SELECT * from values');
 
-  res.send(values.rows);
+  res.send([1, 2, 3]);
 });
 
 app.get('/values/current', async (req, res) => {
