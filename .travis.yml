@@ -14,7 +14,7 @@ before_install:
   - gcloud config set project complexk8s
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials complexk-8
-  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USER" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
   - docker build -t shafik/react-test -f ./client/Dockerfile.dev ./client
 
 script:
