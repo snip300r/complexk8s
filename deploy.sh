@@ -6,7 +6,7 @@ docker push shafik/complexk8s-client:latest
 docker push shafik/complexk8s-client:$SHA
 
 docker push shafik/complexk8s-server:latest
-docker push shafik/complexk8s-server$SHA
+docker push shafik/complexk8s-server:$SHA
 
 docker push shafik/complexk8s-worker:latest
 docker push shafik/complexk8s-worker:$SHA
