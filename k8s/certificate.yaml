@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
 metadata:
@@ -19,25 +18,3 @@ spec:
         domains:
           - "34.67.60.39" 
           - www.34.67.60.39
-=======
-# apiVersion: certmanager.k8s.io/v1alpha1
-# kind: Certificate
-# metadata:
-#   name: k8s-multi-com-tls
-# spec:
-#   secretName: k8s-multi-com
-#   issuerRef:
-#     name: letsencrypt-prod
-#     kind: ClusterIssuer
-#   commonName: k8s-multi.com
-#   dnsNames:
-#     - k8s-multi.com
-#     - www.k8s-multi.com
-#   acme:
-#     config:
-#       - http01:
-#           ingressClass: nginx
-#         domains:
-#           - k8s-multi.com
-#           - www.k8s-multi.com
->>>>>>> 80109e6eb36959b3680732a7739b1f0f7ffe042a
