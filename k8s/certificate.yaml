@@ -1,20 +1,20 @@
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
 metadata:
-  name: k8s-multi-com-tls
+  name: 34.67.60.39-tls
 spec:
-  secretName: k8s-multi-com
+  secretName: "34.67.60.39"
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: k8s-multi.com
+  commonName: "34.67.60.39"
   dnsNames:
-    - k8s-multi.com
-    - www.k8s-multi.com
+    - "34.67.60.39"
+    - www.34.67.60.39
   acme:
     config:
-      - http01:
+      - http01: 
           ingressClass: nginx
         domains:
-          - k8s-multi.com
-          - www.k8s-multi.com
+          - "34.67.60.39" 
+          - www.34.67.60.39
